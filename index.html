@@ -9,11 +9,10 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
+    <!-- <link href="img/favicon.ico" rel="icon">-->
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -67,7 +66,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">үйлену тойына шақырамыз</h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                    data-src="https://www.youtube.com/watch?v=umYGE6kyZkI" data-target="#videoModal">
+                                    data-src="https://www.youtube.com/embed/umYGE6kyZkI?si=rOp8y52JoA2ygeCo" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -82,7 +81,7 @@
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">үйлену тойына шақырамыз</h3>
                             </div>
                             <button type="button" class="btn-play mx-auto" data-toggle="modal"
-                                    data-src="https://www.youtube.com/watch?v=umYGE6kyZkI" data-target="#videoModal">
+                                    data-src="https://www.youtube.com/embed/umYGE6kyZkI?si=rOp8y52JoA2ygeCo" data-target="#videoModal">
                                 <span></span>
                             </button>
                         </div>
@@ -541,6 +540,36 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+    <script>
+  const translations = {
+    kz: {
+      "family-title": "Той йелерi",
+      "guest-invite": "Біздің мерекенің қадірлі қонағы болуына шақырамыз",
+      "rsvp-title": "Tiркелу",
+      "rsvp-sub": "Біздің бақытымызбен бөлісіңіз",
+      // Добавляй другие ключи тут
+    },
+    ru: {
+      "family-title": "Хозяева торжества",
+      "guest-invite": "Приглашаем вас стать почетным гостем нашего праздника",
+      "rsvp-title": "Регистрация",
+      "rsvp-sub": "Поделитесь с нами нашей радостью",
+      // Добавляй другие ключи тут
+    }
+  };
+
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      const key = el.getAttribute('data-lang');
+      if (translations[lang] && translations[lang][key]) {
+        el.textContent = translations[lang][key];
+      }
+    });
+  }
+
+  // Установить язык по умолчанию
+  setLanguage('kz');
+</script>
 </body>
 
 </html>
